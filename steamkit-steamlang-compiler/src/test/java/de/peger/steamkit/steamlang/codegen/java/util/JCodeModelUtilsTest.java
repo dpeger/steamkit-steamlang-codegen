@@ -4,8 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-import de.peger.steamkit.steamlang.codegen.java.util.JCodeModelUtils;
-
 public class JCodeModelUtilsTest {
 
     private void internalTestExtractFieldName(final String tExpectedName, final String tPrefix) {

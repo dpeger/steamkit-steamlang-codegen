@@ -65,7 +65,7 @@ public class JCodeModelUtils {
 
     public static @Nonnull JDefinedClass findExistingJClass(final String pClassName, final JCodeModel pModel)
             throws ClassNotFoundException {
-    
+
         JDefinedClass tReturnJClass = null;
         package_loop: for (final Iterator<JPackage> tPackageIt = pModel.packages(); tPackageIt.hasNext();) {
             final JPackage tJPackage = tPackageIt.next();
@@ -76,11 +76,11 @@ public class JCodeModelUtils {
                 }
             }
         }
-    
+
         if (tReturnJClass == null) {
             throw new ClassNotFoundException(pClassName);
         }
-    
+
         return tReturnJClass;
     }
 
