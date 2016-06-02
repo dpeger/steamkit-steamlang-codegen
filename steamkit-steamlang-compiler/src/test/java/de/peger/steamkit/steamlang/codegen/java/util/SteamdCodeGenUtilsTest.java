@@ -9,8 +9,6 @@ import com.helger.jcodemodel.IJExpression;
 import com.helger.jcodemodel.JCodeModel;
 import com.helger.jcodemodel.JFormatter;
 
-import de.peger.steamkit.steamlang.codegen.java.util.SteamdCodeGenUtils;
-
 public class SteamdCodeGenUtilsTest {
 
     @Test

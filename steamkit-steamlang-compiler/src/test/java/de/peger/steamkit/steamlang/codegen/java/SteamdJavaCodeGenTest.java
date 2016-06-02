@@ -46,12 +46,14 @@ public class SteamdJavaCodeGenTest {
             final SteamdCodeGenContext tContext = new SteamdCodeGenContext();
             tOutputBaseDir = Files.createTempDirectory("SteamdJavaCodeGenTest").toFile();
             tContext.setOutputBaseDir(tOutputBaseDir);
-            
+
             tContext.addOutputPackageMapping("multiple_enums.steamd", "org.opensteamworks.steamkit.steamlang.enums");
-            tContext.addOutputPackageMapping("class_with_fqn_types.steamd", "org.opensteamworks.steamkit.steamlang.internal.gc");
-            tContext.addOutputPackageMapping("class_with_import.steamd", "org.opensteamworks.steamkit.steamlang.internal");
+            tContext.addOutputPackageMapping("class_with_fqn_types.steamd",
+                    "org.opensteamworks.steamkit.steamlang.internal.gc");
+            tContext.addOutputPackageMapping("class_with_import.steamd",
+                    "org.opensteamworks.steamkit.steamlang.internal");
             tContext.addOutputPackageMapping("single_class.steamd", "org.opensteamworks.steamkit.steamlang.internal");
-            
+
             tContext.addImportPackageMapping("SteamKit2.GC.Internal", "org.opensteamworks.steamkit.base.proto.gc");
             // @formatter:on
 
