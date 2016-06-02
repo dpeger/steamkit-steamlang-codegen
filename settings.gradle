@@ -1,0 +1,2 @@
+include "steamkit-steamlang-compiler"
+include "steamkit-steamlang-parser"

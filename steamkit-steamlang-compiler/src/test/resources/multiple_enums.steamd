@@ -1,0 +1,20 @@
+enum TheFirstEnum<uint>
+{
+	None = 0;
+};
+
+enum TheSecondEnum
+{
+	KeepBest = 1;
+	ForceUpdate = 2;
+};
+
+enum YetAnotherEnum<byte> flags
+{
+	Invalid = -1;
+	Private = 2;
+	FriendsOnly = 4;
+	Public = 8;
+	
+	All = Public | FriendsOnly | Private; // 14
+};
