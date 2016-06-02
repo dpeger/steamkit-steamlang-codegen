@@ -1,0 +1,9 @@
+#import "multiple_enums.steamd"
+
+class MsgChannelEncryptRequest<TheSecondEnum::ForceUpdate>
+{
+	const uint PROTOCOL_VERSION = 1;
+	
+	uint protocolVersion = MsgChannelEncryptRequest::PROTOCOL_VERSION;
+	YetAnotherEnum universe = YetAnotherEnum::Invalid;
+};
