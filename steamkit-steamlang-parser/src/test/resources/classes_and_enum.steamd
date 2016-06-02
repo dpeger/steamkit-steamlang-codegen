@@ -1,0 +1,28 @@
+enum EUdpPacketType<byte>
+{
+	Invalid = 0;
+		
+	ChallengeReq = 1;
+	Challenge = 2;
+	Connect = 3;
+	Accept = 4;
+	Disconnect = 5;
+	Data = 6;
+	Datagram = 7;
+	Max = 8;
+};
+
+class ChallengeData
+{
+	const uint CHALLENGE_MASK = 0xA426DF2B;
+	
+	uint challengeValue;
+	uint serverLoad;
+};
+
+class ConnectData
+{
+	const uint CHALLENGE_MASK = ChallengeData::CHALLENGE_MASK;
+	
+	uint challengeValue;
+};

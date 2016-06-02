@@ -1,0 +1,22 @@
+class UdpHeader
+{
+	const uint MAGIC = 0x31305356;
+	
+	uint magic = UdpHeader::MAGIC;
+	
+	ushort payloadSize;
+	byte flags;
+	
+	boolmarshal byte validated;
+	
+	uint sourceConnID = 512;
+    byte<1450> data;
+	
+	uint seqThis;
+	uint seqAck;
+	
+	uint packetsInMsg;
+	uint msgStartSeq;
+	
+	uint msgSize;
+};

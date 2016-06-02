@@ -1,0 +1,23 @@
+enum EChatPermission flags
+{
+	Close = 1;
+	Invite = 2;
+	Talk = 8;
+	Kick = 16;
+	Mute = 32;
+	SetMetadata = 64;
+	ChangePermissions = 128;
+	Ban = 256;
+	ChangeAccess = 512;
+
+	EveryoneNotInClanDefault = Talk; // 8
+	EveryoneDefault = Talk | Invite; // 10
+
+	// todo: this doesn't seem correct...
+	MemberDefault = Ban | Kick | Talk | Invite; // 282
+
+	OfficerDefault = Ban | Kick | Talk | Invite; // 282
+	OwnerDefault = ChangeAccess | Ban | SetMetadata | Mute | Kick | Talk | Invite | Close; // 891
+
+	Mask = 1019; obsolete not really but for testing purposes
+};

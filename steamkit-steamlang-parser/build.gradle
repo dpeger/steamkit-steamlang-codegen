@@ -1,0 +1,10 @@
+apply plugin: "antlr"
+
+repositories {
+    //flatDir { dirs 'libs' }
+}
+
+dependencies {
+	antlr group: 'org.antlr', name: 'antlr', version: '3.5.2' // use ANTLR version 3
+	// antlr group: 'org.antlr', name: 'antlr4', version: '4.5" // use ANTLR version 4
+}
