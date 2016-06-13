@@ -3,3 +3,5 @@
 /.gradle/
 /.classpath
 /.project
+gradle.properties
+.settings
