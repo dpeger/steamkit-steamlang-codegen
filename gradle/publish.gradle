@@ -12,6 +12,16 @@ subprojects {
                 from components.java
 
                 artifact sourceJar { classifier "sources" }
+
+                pom.withXml {
+
+                    Node license = new Node(null, 'license')
+                    license.appendNode('name', 'Apache License, Version 2.0')
+                    license.appendNode('url', 'https://www.apache.org/licenses/LICENSE-2.0.txt')
+                    license.appendNode('distribution', 'repo')
+
+                    asNode().appendNode('licenses').append(license)
+                }
             }
         }
     }

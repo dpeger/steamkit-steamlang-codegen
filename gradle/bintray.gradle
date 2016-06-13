@@ -1,0 +1,32 @@
+subprojects {
+
+    apply plugin: 'com.jfrog.bintray'
+
+    bintray {
+        user = project.hasProperty('bintrayUser') ? project.property('bintrayUser') : System.getenv('BINTRAY_USER')
+        key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
+        publications = ['mavenJava']
+        pkg {
+            repo = 'steamkit'
+            name = 'steamkit-steamlang-codegen'
+            licenses = ['Apache-2.0']
+            labels = ['steamd', 'steamkit', 'steamlang']
+
+            websiteUrl = 'https://github.com/dpeger/steamkit-steamlang-codegen'
+            issueTrackerUrl = 'https://github.com/dpeger/steamkit-steamlang-codegen/issues'
+            vcsUrl = 'https://github.com/dpeger/steamkit-steamlang-codegen.git'
+
+            githubRepo = 'dpeger/steamkit-steamlang-codegen'
+            githubReleaseNotesFile = 'README.md'
+
+            publicDownloadNumbers = true
+             
+            version {
+                name = project.version
+            }
+        }
+
+        dryRun = false
+        publish = false
+    }
+}
